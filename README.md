@@ -11,6 +11,19 @@
 - Provide information about Pika Network guilds
 - Send daily vote reminders to users
 
+# Usage
+
+To use the bot, invite it to your Discord server using [this invite link](https://discord.com/oauth2/authorize?client_id=1209050248958312448&permissions=551903422464&scope=bot).
+
+Once the bot is in your server, you can use the following commands:
+
+- `/bw [player_name] [interval] [mode]`: Get Bedwars stats for a player.
+- `/sw [player_name] [interval] [mode]`: Get Skywars stats for a player.
+- `/friends [player_name]`: List a player's friends.
+- `/guild-info [guild_name]`: Get information about a Pika Network guild.
+
+For more commands, use `/help`.
+
 # How it Works
 
 The bot uses the following API endpoints from Pika Network to gather data:
@@ -25,19 +38,6 @@ The bot uses the following API endpoints from Pika Network to gather data:
 ### Retrieves a player's profile information.  
 - `https://stats.pika-network.net/api/profile/{player_name}`
 ---
-
-# Usage
-
-To use the bot, invite it to your Discord server using [this invite link](https://discord.com/oauth2/authorize?client_id=1209050248958312448&permissions=551903422464&scope=bot).
-
-Once the bot is in your server, you can use the following commands:
-
-- `/bw [player_name] [interval] [mode]`: Get Bedwars stats for a player.
-- `/sw [player_name] [interval] [mode]`: Get Skywars stats for a player.
-- `/friends [player_name]`: List a player's friends.
-- `/guild-info [guild_name]`: Get information about a Pika Network guild.
-
-For more commands, use `/help`.
 
 # Contributing
 
