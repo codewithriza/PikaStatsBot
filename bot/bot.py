@@ -14,7 +14,7 @@ slash = SlashCommand(bot, sync_commands=True)
 
 @tasks.loop(hours=24)  # Run every 24 hours
 async def send_daily_vote_reminder():
-    now = datetime.datetime.now(pytz.timezone('Asia/Kolkata'))
+    now = datetime.now(pytz.timezone('Asia/Kolkata'))
     if now.hour == 18 and now.minute == 0:  # Check if it's 6:00 PM
         user_id = YOUR_USER_ID_HERE  
         user = await bot.fetch_user(user_id)
@@ -76,7 +76,7 @@ def get_previous_guild_data(guild_name):
     return guild_data_cache.get(guild_name, {'members': []})
 
 def time_since(dt):
-    now = datetime.datetime.now()
+    now = datetime.now()
     diff = now - dt
     days = diff.days
     hours, remainder = divmod(diff.seconds, 3600)
@@ -127,7 +127,7 @@ async def guild_logs(ctx: SlashContext, guild_name: str):
                 color=discord.Color.blue()
             )
             embed.add_field(name=f"{emoji} {change_type}:", value="\n".join([f"{emoji} {member['user']['username']}" for member in member_list]), inline=False)
-            embed.add_field(name=f":date: {change_type}:", value=f"{time_since(datetime.datetime.now())}\n{datetime.now().strftime('%B %d, %Y %I:%M %p')}", inline=False)
+            embed.add_field(name=f":date: {change_type}:", value=f"{time_since(datetime.now())}\n{datetime.now().strftime('%B %d, %Y %I:%M %p')}", inline=False)
             embed.add_field(name=":members: Guild Members", value=f":add: {previous_member_count} -> {current_member_count}" if member_count_change > 0 else f":sub: {previous_member_count} -> {current_member_count}", inline=False)
 
             await ctx.send(embed=embed)
@@ -154,8 +154,8 @@ def get_profile_info(player_name):
         level = rank_data.get('level', 'N/A')
         percentage = rank_data.get('percentage', 'N/A')
         last_seen_timestamp = data_info.get('lastSeen', 0)
-        last_seen_datetime = datetime.datetime.fromtimestamp(last_seen_timestamp / 1000.0)
-        now = datetime.datetime.now()
+        last_seen_datetime = datetime.fromtimestamp(last_seen_timestamp / 1000.0)
+        now = datetime.now()
         time_difference = now - last_seen_datetime
         total_minutes = time_difference.total_seconds() // 60
         days = int(total_minutes // (24 * 60))
