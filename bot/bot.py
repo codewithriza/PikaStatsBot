@@ -178,7 +178,7 @@ def get_profile_info(player_name):
             f"> **Level**: `{level}`\n"
             f"> **Percentage**: `{percentage}`\n"
             f"> {guild_info}"
-            f"> **Last seen**:  `{last_seen_message}`\n"
+            f" **Last seen**:  `{last_seen_message}`\n"
         )
     else:
         profile_info = "Player info not available."
