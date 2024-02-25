@@ -17,7 +17,7 @@ To use the bot, invite it to your Discord server using [this invite link](https:
 
 Once the bot is in your server, you can use the following commands:
 
-- `/bw [player_name] [interval] [mode]`: Get Bedwars stats for a player.
+- ```/bw [player_name] [interval] [mode]`: Get Bedwars stats for a player.
 - `/sw [player_name] [interval] [mode]`: Get Skywars stats for a player.
 - `/friends [player_name]`: List a player's friends.
 - `/guild-info [guild_name]`: Get information about a Pika Network guild.
@@ -29,14 +29,19 @@ For more commands, use `/help`.
 The bot uses the following API endpoints from Pika Network to gather data:
 
 ###  Retrieves information about a Pika Network guild 
-- ```https://stats.pika-network.net/api/clans/{guild_name}```
-
+ ```
+https://stats.pika-network.net/api/clans/{guild_name}
+```
 ---
 ###  Retrieves leaderboard data for a player in a specific game mode.
-- `https://stats.pika-network.net/api/profile/{player_name}/leaderboard?type={game_type}&interval={interval}&mode={mode}`
+```
+https://stats.pika-network.net/api/profile/{player_name}/leaderboard?type={game_type}&interval={interval}&mode={mode}
+```
 ---
 ### Retrieves a player's profile information.  
-- `https://stats.pika-network.net/api/profile/{player_name}`
+```
+https://stats.pika-network.net/api/profile/{player_name}
+```
 ---
 
 # Contributing
