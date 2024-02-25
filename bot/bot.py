@@ -185,7 +185,7 @@ def get_profile_info(player_name):
 
 # Define a function to get the game stats of a player
 def get_game_stats(player_name, game_type, interval, mode):
-    # Fetch player stats based on the interval
+    # Fetch player stats based on the interval and game type
     url_stats = f'https://stats.pika-network.net/api/profile/{player_name}/leaderboard?type={game_type}&interval={interval}&mode={mode}'
     response_stats = requests.get(url_stats)
     if response_stats.status_code == 200:
@@ -200,8 +200,6 @@ def get_game_stats(player_name, game_type, interval, mode):
     else:
         stats_message = "Game stats not available."
     return stats_message
-
-
 
 # Define a slash command for skywars stats
 @slash.slash(
@@ -252,6 +250,60 @@ async def sw(ctx: SlashContext, player_name: str, interval: str = "total", mode:
         embed=discord.Embed(
             title=f"{player_name}'s Skywars Stats",
             description=f"{profile_info}\n**Skywars Stats**\n**Interval**: `{interval.capitalize()}`\n**Mode**: `{mode.capitalize()}`\n{skywars_stats}",
+            color=discord.Color.blue()
+        )
+    )
+
+# Define a slash command for bedwars stats
+@slash.slash(
+    name="bw",
+    description="Get Pika Network bedwars stats",
+    options=[
+        create_option(
+            name="player_name",
+            description="The Pika Network username",
+            option_type=3,
+            required=True
+        ),
+        create_option(
+            name="interval",
+            description="The time interval for the stats",
+            option_type=3,
+            required=False,
+            choices=[
+                {"name": "Total", "value": "total"},
+                {"name": "Monthly", "value": "monthly"},
+                {"name": "Weekly", "value": "weekly"},
+                {"name": "Daily", "value": "daily"}
+            ]
+        ),
+        create_option(
+            name="mode",
+            description="The bedwars mode for the stats",
+            option_type=3,
+            required=False,
+            choices=[
+                {"name": "Solo", "value": "solo"},
+                {"name": "Doubles", "value": "doubles"},
+                {"name": "3v3v3v3", "value": "3v3v3v3"},
+                {"name": "4v4v4v4", "value": "4v4v4v4"},
+                {"name": "Ranked", "value": "ranked"}
+            ]
+        )
+    ]
+)
+async def bw(ctx: SlashContext, player_name: str, interval: str = "total", mode: str = "solo"):
+    await ctx.defer()
+
+    # Get the profile info and the bedwars stats of the player
+    profile_info = get_profile_info(player_name)
+    bedwars_stats = get_game_stats(player_name, "bedwars", interval, mode)
+
+    # Send the message with the stats
+    await ctx.send(
+        embed=discord.Embed(
+            title=f"{player_name}'s Bedwars Stats",
+            description=f"{profile_info}\n**Bedwars Stats**\n**Interval**: `{interval.capitalize()}`\n**Mode**: `{mode.capitalize()}`\n{bedwars_stats}",
             color=discord.Color.blue()
         )
     )
