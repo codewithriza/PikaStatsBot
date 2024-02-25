@@ -29,10 +29,6 @@ For more commands, use `/help`.
 
 We welcome contributions from the community! If you'd like to contribute to the bot, please check out our [contribution guidelines](CONTRIBUTING.md).
 
-## Support
-
-If you need help with the bot or have any questions, you can join our Discord server at [Discord server invite link](https://discord.gg/Yk9s2ZWTAU).
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
