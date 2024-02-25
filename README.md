@@ -19,6 +19,7 @@ To use the bot, invite it to your Discord server using [this invite link](https:
 
 Once the bot is in your server, you can use the following commands:
 
+- `/bw [player_name] [interval] [mode]`: Get Bedwars stats for a player.
 - `/sw [player_name] [interval] [mode]`: Get Skywars stats for a player.
 - `/friends [player_name]`: List a player's friends.
 - `/guild-info [guild_name]`: Get information about a Pika Network guild.
