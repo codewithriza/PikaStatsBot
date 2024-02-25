@@ -1,7 +1,7 @@
 # Pika Stats Bot
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Discord](https://img.shields.io/discord/1209038293757329408)](https://discord.gg/saj5DaSRw9)
+
 
 
 **Pika Stats Bot** is a Discord bot that provides statistics for Pika Network games, including Bedwars, Skywars, and more. It offers features like displaying player profiles, game stats, guild information, and daily vote reminders.
