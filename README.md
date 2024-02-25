@@ -40,4 +40,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 **Note**: Pika Stats Bot is not affiliated nor partnered with PikaNetwork!
 ---
 [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/oauth2/authorize?client_id=1209050248958312448&permissions=551903422464&scope=bot)
-[![X](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)](https://twitter.com/PikachuStats)
+   [![X](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)](https://twitter.com/PikachuStats)
