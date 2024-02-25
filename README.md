@@ -32,7 +32,7 @@ We welcome contributions from the community! If you'd like to contribute to the 
 ## Support
 
 If you need help with the bot or have any questions, you can join our Discord server at [Discord server invite link](https://discord.gg/Yk9s2ZWTAU).
-[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Yk9s2ZWTAU)
+[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/oauth2/authorize?client_id=1209050248958312448&permissions=551903422464&scope=bot)
 [![X](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)](https://twitter.com/PikachuStats)
 ## License
 
