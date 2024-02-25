@@ -29,6 +29,6 @@ If you encounter a bug related to showing Bedwars stats, please open an issue wi
 
 ## Contact
 
-If you have any questions or need assistance, you can reach out to us on Discord at [Discord server](https://discord.gg/Yk9s2ZWTAU) or open an issue in the repository.
+If you have any questions or need assistance, you can reach out to us on Discord at [Discord server](https://discord.gg/) or open an issue in the repository.
 
 Thank you for contributing to Pika Stats Bot!
