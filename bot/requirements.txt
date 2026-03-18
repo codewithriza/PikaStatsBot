@@ -1,4 +1,14 @@
-discord.py
-discord-py-slash-command
-pytz
-requests
+# PikaStatsBot Dependencies
+# Install with: pip install -r bot/requirements.txt
+
+# Discord bot framework (v2+ with slash commands & UI components)
+discord.py>=2.3.0
+
+# Async HTTP client for API requests
+aiohttp>=3.9.0
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# Timezone support for vote reminders
+pytz>=2024.1
